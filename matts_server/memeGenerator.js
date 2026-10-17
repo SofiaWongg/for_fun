@@ -65,7 +65,7 @@ const generateMeme = async (prompt, resolution = '1K', aspectRatio = '1:1') => {
     const ctx = canvas.getContext('2d');
     ctx.drawImage(img, 0, 0);
     // return the pixel grid
-    return canvas.toDataURL();
+    return canvas.toBuffer("image/png");
 }
 
 module.exports = { generateMeme };

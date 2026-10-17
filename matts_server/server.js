@@ -15,8 +15,8 @@ app.get('/meme', async (req, res) => {
     const resolution = req.query.resolution || defaultResolution;
     const aspectRatio = req.query.aspectRatio || defaultAspectRatio;
     const meme = await memeGenerator.generateMeme(prompt, resolution, aspectRatio);
-    // display the meme in the browser
-    res.send(`<img src="${meme}" />`);
+    res.type('image/png');
+    res.send(meme);
 });
 
 app.listen(3000, () => console.log('Server is running on port 3000'));
