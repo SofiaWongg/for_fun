@@ -6,6 +6,7 @@ def start_matt_app():
 def start_sofia_app():
     print("Starting Sofia's app...")
 
+
 def main():
     start_matt_app()
     start_sofia_app()
