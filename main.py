@@ -6,7 +6,7 @@ print("Hello, World!")
 def start_matt_app():
     print("Starting Matt's app...")
     # start in background
-    os.system("cd matts-server && node server.js &")
+    os.system("cd matts_server && node server.js &")
 def start_sofia_app():
     print("Starting Sofia's app...")
     uvicorn.run("sofias-server.app:app", host="0.0.0.0", port=8001, reload=True)
