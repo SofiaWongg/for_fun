@@ -1,3 +1,5 @@
+import uvicorn
+
 print("Hello, World!")
 
 def start_matt_app():
@@ -5,6 +7,8 @@ def start_matt_app():
 
 def start_sofia_app():
     print("Starting Sofia's app...")
+    uvicorn.run("sofias-server.app:app", host="0.0.0.0", port=8001, reload=True)
+
 
 
 def main():
