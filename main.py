@@ -1,6 +1,6 @@
 import uvicorn
 import os
-
+import sys
 print("Hello, World!")
 
 def start_matt_app():
@@ -9,7 +9,7 @@ def start_matt_app():
     os.system("cd matts-server && node server.js &")
 def start_sofia_app():
     print("Starting Sofia's app...")
-    uvicorn.run("sofias-server.app:app", host="0.0.0.0", port=8001, reload=True)
+    uvicorn.run("sofias_server.app:app", host="0.0.0.0", port=8001, reload=True)
 
 def main():
     start_matt_app()
